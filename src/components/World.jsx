@@ -46,10 +46,12 @@ export function World({ onPlayer1Win, onPlayer2Win }) {
 
   useEffect(() => {
     if (player1gameOver && player2gameOver) {
-      setFrog1Position(p1InitialState);
-      setFrog2Position(p2InitialState);
-      setPlayer1gameOver(false);
-      setPlayer2gameOver(false);
+      setTimeout(() => {
+        setFrog1Position(p1InitialState);
+        setFrog2Position(p2InitialState);
+        setPlayer1gameOver(false);
+        setPlayer2gameOver(false);
+      }, 1000);
     }
   }, [player1gameOver, player2gameOver]);
 
